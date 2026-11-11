@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Formazione 4-4-2</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenitore">
+
+        <header>
+            <p class="etichetta">FORMAZIONE TITOLARE</p>
+
+            <h1>La mia squadra</h1>
+
+            <p class="presentazione">
+                La squadra scende in campo con il modulo 4-4-2.
+            </p>
+        </header>
+
+
+        <!--
+        CAMPO
+
+        Il campo è il genitore delle linee.
+        Nel CSS diventerà un contenitore Flexbox
+        con direzione column.
+        -->
+
+        <div class="campo">
+
+
+            <!--
+            LINEA DEGLI ATTACCANTI
+
+            La linea è figlia del campo,
+            ma è anche genitore delle card.
+            -->
+
+            <div class="linea">
+
+                <div class="atleta">
+                    <span class="numero">9</span>
+                    <strong>Luca Rossi</strong>
+                    <small>Attaccante</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">11</span>
+                    <strong>Marco Bianchi</strong>
+                    <small>Attaccante</small>
+                </div>
+
+            </div>
+
+
+            <!-- LINEA DEI CENTROCAMPISTI -->
+
+            <div class="linea">
+
+                <div class="atleta">
+                    <span class="numero">7</span>
+                    <strong>Davide Villa</strong>
+                    <small>Centrocampista</small>
+                </div>
+                
+                <div class="atleta">
+                    <span class="numero">8</span>
+                    <strong>Andrea Sala</strong>
+                    <small>Centrocampista</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">10</span>
+                    <strong>Paolo Riva</strong>
+                    <small>Centrocampista</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">6</span>
+                    <strong>Matteo Fiorini</strong>
+                    <small>Centrocampista</small>
+                </div>
+
+            </div>
+
+
+            <!-- LINEA DEI DIFENSORI -->
+
+            <div class="linea">
+
+                <div class="atleta">
+                    <span class="numero">3</span>
+                    <strong>Fabio Neri</strong>
+                    <small>Difensore</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">4</span>
+                    <strong>Enrico Gallo</strong>
+                    <small>Difensore</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">5</span>
+                    <strong>Simone Conti</strong>
+                    <small>Difensore</small>
+                </div>
+
+                <div class="atleta">
+                    <span class="numero">2</span>
+                    <strong>Nicola Fontana</strong>
+                    <small>Difensore</small>
+                </div>
+
+            </div>
+
+
+            <!-- LINEA DEL PORTIERE -->
+
+            <div class="linea">
+
+                <div class="atleta atleta-portiere">
+                    <span class="numero">1</span>
+                    <strong>Maria Coffani</strong>
+                    <small>Portiere</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            <p>
+                Modulo: <strong>4-4-2</strong>
+                · Allenatore: <strong>Giulia Ferri</strong>
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+/*
+Comprende padding e bordo
+nelle dimensioni dichiarate.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/*
+Aspetto generale della pagina.
+*/
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #edf2ef;
+    color: #17231c;
+}
+
+
+/*
+Contenitore principale.
+*/
+
+.contenitore {
+    width: 90%;
+    max-width: 650px; /* Ridotto per rendere il layout più stretto e verticale */
+    margin: 40px auto;
+}
+
+
+/*
+Intestazione.
+*/
+
+header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.etichetta {
+    margin-bottom: 8px;
+
+    color: #177245;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    margin: 0;
+
+    color: #123d28;
+    font-size: 40px;
+}
+
+
+.presentazione {
+    margin-top: 10px;
+
+    color: #53645a;
+    font-size: 18px;
+}
+
+
+/*
+CAMPO
+
+Il campo è il genitore delle linee.
+
+display: flex trasforma il campo
+in un contenitore Flexbox.
+
+column dispone le linee
+una sotto l'altra.
+
+space-evenly distribuisce
+uniformemente lo spazio verticale.
+*/
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+
+    /* Aumenta l'altezza e imposta proporzioni verticali */
+    min-height: 850px; 
+    /* Opzionale: puoi usare aspect-ratio se desideri proporzioni fisse */
+    /* aspect-ratio: 3 / 4; */
+
+    padding: 30px 20px;
+
+    background-color: #17df7b;
+    border: 5px solid white;
+    border-radius: 18px;
+    box-shadow: 0 15px 30px rgb(0 0 0 / 20%);
+}
+
+
+/*
+LINEA
+
+Ogni linea è figlia del campo
+e genitore delle card degli atleti.
+
+row dispone gli atleti
+uno accanto all'altro.
+
+space-evenly lascia la stessa quantità
+di spazio tra gli atleti e i bordi.
+*/
+
+.linea {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    gap: 15px;
+
+
+    /*
+    Se lo spazio non è sufficiente,
+    le card possono andare a capo.
+    */
+
+    flex-wrap: wrap;
+}
+
+
+/*
+CARD DELL'ATLETA
+
+La posizione della card è controllata
+dal genitore con classe linea.
+
+Questa regola definisce invece
+l'aspetto della card.
+*/
+
+
+.atleta {
+    /* Ridotta la larghezza base da 145px a 110px-120px e il padding */
+    flex: 0 1 120px; 
+    padding: 10px 8px; 
+    /* 10px (primo valore): È l'aria interna applicata sopra e sotto al contenuto.
+        8px (secondo valore): È l'aria interna applicata a destra e sinistra (ai lati).  */
+
+    background-color: white;
+    border: 2px solid rgb(255 255 255 / 80%);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgb(0 0 0 / 20%);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Riduzione opzionale del testo per far entrare bene i nomi lunghi */
+.atleta strong {
+    font-size: 14px;
+}
+
+/*
+NUMERO DI MAGLIA
+
+Lo span diventa un blocco quadrato.
+
+border-radius: 50% lo trasforma
+in un cerchio.
+*/
+
+.numero {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    margin: 0 auto 10px;
+
+    background-color: #123d28;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    line-height: 40px;
+    text-align: center;
+}
+
+
+/*
+Nome e ruolo vengono visualizzati
+su due righe separate.
+*/
+/* 
+.atleta strong,
+.atleta small {
+    display: block;
+}
+
+
+.atleta small {
+    margin-top: 5px;
+    color: #5d6c63;
+}
+ */
+
+/*
+Il portiere viene distinto
+con un colore differente.
+*/
+
+.atleta-portiere {
+    background-color: #fff3bf;
+    border-color: #ffd43b;
+}
+
+
+/*
+Effetto al passaggio del mouse.
+*/
+
+.atleta:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
+}
+
+
+/*
+Parte finale della pagina.
+*/
+
+footer {
+    margin-top: 20px;
+
+    color: #53645a;
+
+    text-align: center;
+}
